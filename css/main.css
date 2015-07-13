@@ -1,0 +1,805 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600,300,100|Open+Sans+Condensed:300);
+
+*:before, *, *:after {
+	-webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smooting: grayscale;
+}
+
+::-webkit-input-placeholder{
+   color: #AAA;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #AAA;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #AAA;  
+}
+
+:-ms-input-placeholder {  
+   color: #AAA;  
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0px;
+}
+
+html, body {
+	min-height: 100%;
+}
+
+body {
+	background: #FFF linear-gradient(to bottom, #3F567C, #B5CCC6) no-repeat;
+	font-family: Open Sans, sans-serif;
+	height: 100%;
+	padding: 50px 0px 0px 0px;
+}
+
+.container {
+	width: 960px;
+	margin: 0px auto;
+}
+
+header {
+	width: 100%;
+	height: 65px;
+	color: #FFF;
+	background: #279CEB;
+	border-radius: 5px 5px 0px 0px;
+}
+
+header:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+header a {
+	color: inherit;
+	text-decoration: none;
+	transition: color 0.3s linear, background 0.3s linear;
+}
+
+header a:hover {
+	color: #EEE;
+}
+
+header .brand {
+	text-transform: uppercase;
+  font-size: 40px;
+  line-height: 65px;
+  padding-left: 20px;
+	font-family: Open Sans Condensed, sans-serif;
+	width: 250px;
+	display: block;
+	float: left;
+	background: #3AB0FF;
+	border-top-left-radius: 5px;
+}
+
+header nav {
+	float: left;
+}
+
+header nav a {
+	padding: 0px 20px;
+	font-size: 14px;
+	display: block;
+	float: left;
+	line-height: 65px;
+	color: #EEE;
+	font-weight: bold;
+}
+
+header nav a.active, header nav a.active:hover {
+	background: #3AB0FF;
+}
+
+header nav a:hover {
+	color: #FFF;
+	background: rgba(58, 176, 255, 0.45);
+}
+
+header .lr {
+	float: right;
+	height: 65px;
+	line-height: 65px;
+	padding: 0px 20px;
+	border-top-right-radius: 5px;
+	background: #3AB0FF;
+	position: relative;
+}
+
+header .lr a.first:after {
+	content: "/";
+	margin-left: 10px;
+	margin-right: 5px;
+}
+
+header .lr a:last-of-type {
+	font-weight: bold;
+}
+
+header .lr .avatar {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	border-radius: 100%;
+	background: #FFF;
+	float: left;
+	color: #3AB0FF;
+	position: relative;
+	margin: 17px 0px;
+}
+
+header .lr .avatar i {
+	position: absolute;
+	left: 9px;
+	top: 7px;
+}
+
+header .lr .panel {
+	width: 130px;
+	padding: 10px;
+	position: absolute;
+	top: 50px;
+	right: 0px;
+	z-index: 10;
+	background: #3AB0FF;
+	display: none;
+	border-left: 1px solid #279CEB;
+	border-bottom: 1px solid #279CEB;
+}
+
+header .lr:hover .panel {
+	display: block;
+}
+
+header .lr .panel a {
+	background: #EEE;
+	line-height: 30px;
+	width: 100%;
+	color: #666;
+	text-align: center;
+	display: block;
+	height: 30px;
+	font-weight: normal;
+	font-family: Open Sans Condensed, sans-serif;
+	margin-bottom: 10px;
+}
+
+header .lr .panel a:last-of-type {
+	margin: 0px;
+}
+
+header .lr .panel p {
+	margin: 0px;
+	padding: 0px;
+	line-height: 45px;
+}
+
+aside {
+	width: 250px;
+	background: #24282C;
+	float: left;
+	border-bottom-left-radius: 5px;
+	margin-bottom: 50px;
+	transform: height 0.2s linear;
+}
+
+aside form {
+	width: 250px;
+	padding: 20px;
+	margin-bottom: 10px;
+	background: #373D41;
+	position: relative;
+}
+
+aside form input {
+	width: 150px;
+  border: none;
+  padding: 10px 40px 10px 20px;
+  border-radius: 50px;
+  font-size: 12px;
+  outline: none;
+  color: #999;
+  transition: color 0.3s linear;
+}
+
+aside form i {
+	position: absolute;
+	right: 35px;
+	top: 27px;
+	font-size: 20px;
+	color: #CCC;
+	transition: color 0.3s linear;
+}
+
+aside form input:focus {
+	color: #333;
+}
+
+aside form input:focus ~ i {
+	color: #999;
+}
+
+aside h4 {
+	color: #DDD;
+	text-transform: uppercase;
+	font-family: Open Sans Condensed, sans-serif;
+	padding: 0px 20px;
+	font-size: 20px;
+}
+
+aside ul {
+	margin: 10px 15px;
+	
+}
+ 
+aside ul li {
+	position: relative;
+	list-style: none;
+}
+
+aside ul li:before {
+	font-family: 'FontAwesome';
+	content: '\f111';
+	position: absolute;
+	top: 5px;
+	left: -20px;
+	font-size: 12px;
+	color: #FF3A3A;
+}
+
+aside ul li a {
+	font-family: Open Sans, sans-serif;
+	color: #EEE;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+aside ul li a:hover {
+	color: #FFF;
+}
+
+main {
+	float: left;
+	background: #FFF;
+	width: 710px;
+	min-height: 870px; 
+	border-bottom-right-radius: 5px;
+	margin-bottom: 50px;
+	position: relative;
+}
+
+main > figure {
+	margin: 0px;
+	position: relative;
+	height: 300px;
+}
+
+main > figure > span {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	padding: 6px 12px;
+	background: rgba(25, 25, 25, 0.3);
+	color: #FFF;
+	font-size: 14px;
+}
+
+main > figure figcaption {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: 70px;
+	background: rgba(10, 10, 10, 0.8);
+	padding: 0px 15px;
+	line-height: 70px;
+	color: #FFF;
+}
+
+main > figure figcaption h2 {
+	float: left;
+}
+
+main > figure figcaption h2 i {
+	color: #FF3A3A;
+	margin-right: 15px;
+}
+
+main > figure figcaption:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+main > figure figcaption .right {
+	float: right;
+}
+
+main .titleBar {
+	padding: 20px;
+	border-bottom: 1px solid #DDD;
+}
+
+main .titleBar:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+main .titleBar span {
+	float: right;
+}
+
+main .titleBar span a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a.right {
+	float: right;
+	text-decoration: underline !important;
+}
+
+main > section {
+	padding: 20px;
+}
+
+main > section figure {
+	width: 200px;
+	height: 205px;
+	margin: 0px;
+	float: left;
+	position: relative;
+}
+
+main > section figure img {
+	width: 200px;
+	height: 200px;
+}
+
+main > section figure figcaption {
+	position: absolute;
+	height: 30px;
+	line-height: 30px;
+	top: 85px;
+	left: 20px;
+	right: 20px;
+	text-align: center;
+	background: #3AB0FF;
+	opacity: 0;
+	transition: 0.1s all linear;
+}
+
+main > section figure:hover figcaption {
+	opacity: 1;
+} 
+
+main > section figure figcaption a {
+	text-decoration: none;
+	color: #FFF;
+	display: block;
+}
+
+main > section form:after {
+	content: "";
+	display: block;
+	clear: both;
+} 
+
+main > section form > .right {
+	float: right;
+	width: 450px;
+}
+
+main form input, main form textarea {
+	outline: none;
+	padding: 7px 12px;
+	border: none;
+	background: #EEE;
+	display: block;
+	margin-bottom: 5px;
+	width: 100%;
+	transition: 0.3s box-shadow linear;
+}
+
+main form.add input[type="text"], main form .name {
+	width: 270px;
+	float: left;
+}
+
+main form .category {
+	float: right;
+	width: 175px;
+}
+
+main form.add .select {
+	float: right;
+	background: #EEE;
+	width: 175px;
+	height: 36px;
+	position: relative;
+}
+
+main form.add .select:after {
+	content: "\f0d7";
+	font-family: "FontAwesome";
+	display: block;
+	width: 35px;
+	height: 35px;
+	background: #3AB0FF;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	text-align: center;
+	line-height: 35px; 
+	color: #EEE;
+	cursor: pointer;
+}
+
+.select select {
+	background: transparent;
+	-webkit-appearance: none;
+	appearance: none;
+	outline: none;
+	border-radius: 0;
+	border: 0;
+	height: 36px;
+	width: 170px;
+	padding-left: 10px;
+	color: #AAA;
+	cursor: pointer;
+}
+
+main form input:focus, main form textarea:focus, main form select:focus {
+	box-shadow: inset 0px 0px 1px 1px #3AB0FF;
+}
+
+main form textarea {
+	height: 159px;
+	overflow-y: none;
+	resize: none;
+}
+
+.left {
+	float: left;
+}
+
+.no {
+	opacity: 0.25;
+	cursor: default;
+}
+
+main form button, main form input[type="submit"] {
+	float: right;
+	padding: 8px 16px;
+	outline: none;
+	border: none;
+	color: #FFF;
+	background: #3AB0FF;
+}
+
+main form .errors {
+	float: left;
+}
+
+main form .errors p {
+	padding: 8px 0px;
+	color: #FF3A3A;
+	font-weight: bold;
+	margin: 0px;
+}
+
+aside div.seperator {
+	border-top: 1px solid #111111;
+	border-bottom: 1px solid #353535;
+	margin: 20px;
+}
+
+main .appList {
+	width: 710px;
+}
+
+main .appList td {
+	width: 170px;
+	float: left;
+	padding: 10px;
+	margin-right: 10px;
+}
+
+main .appList td:last-of-type {
+	margin-right: 0px;
+}
+
+main .appList td a {
+	display: block;
+	width: 150px;
+	color: inherit;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+main .appList td a img {
+	border-radius: 5px;
+	width: 150px;
+	height: 180px;
+	display: block;
+}
+
+main .pagination {
+	width: 690px;
+	margin: 10px auto;
+	padding: 10px;
+	background: #EEE;
+	border-radius: 5px;
+	text-align: center;
+	position: absolute;
+	bottom: 5px;
+	left: 10px;
+}
+
+main .pagination a {
+	margin: 0px 5px;
+	color: inherit;
+	text-decoration: none;
+}
+
+main .pagination a.active {
+	font-weight: bold;
+}
+
+main section .mainContent {
+	margin-top: 10px;
+}
+
+main section .userRating {
+	margin-top: 10px;
+  width: 300px;
+  height: 30px;
+  background: rgba(10,10,10,.2);
+	text-align: center;
+	line-height: 30px;
+}
+
+main section .userRating:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+main section .userRating > .inner {
+  float: left;
+  height: 30px;
+  background: #279CEB;
+  position: relative;
+}
+
+main section .userRating > .inner:after {
+	content: attr(data-rating) " / 5";
+	display: block;
+	width: 60px;
+	text-align: center;
+	position: absolute;
+	color: #FFF;
+	right: 0px;
+	line-height: 30px;
+	font-weight: bold;
+	transition: opacity 0.2s linear;
+	opacity: 0;
+}
+
+main section .userRating:hover .inner:after {
+	opacity: 1;
+}
+
+main section .rating {
+	unicode-bidi: bidi-override;
+  direction: rtl;
+  float: left;
+  padding: 0px;
+  margin: 10px 0px 0px 0px;
+}
+
+main section .rating a {
+	display: inline-block;
+	background: rgba(10,10,10,.2);
+	height: 30px;
+	line-height: 30px;
+	width: 30px;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 100%;
+	color: #279CEB;
+}
+
+main section .rating > a:hover,
+main section .rating > a:hover ~ a {
+  color: #FFF;
+  background: #279CEB;
+}
+
+main section .mainContent .column {
+	float: left;
+	width: 50%;
+}
+
+main section .reviews {
+	margin-top: 10px;
+}
+
+main section .reviews h4 {
+	margin-bottom: 10px;
+}
+
+main section .reviews p {
+	line-height: 1.05;
+	padding: 0px;
+	margin: 0px;
+}
+
+main a {
+	color: #3AB0FF;
+}
+
+main section .reviews p:only-of-type {
+	margin-bottom: 20px;
+}
+
+main section .reviews .show {
+	padding: 8px 16px;
+	margin-top: 10px;
+	outline: none;
+	border: none;
+	color: #FFF;
+	background: #3AB0FF;
+	text-decoration: none;
+}
+
+.noApps {
+	width: 250px;
+	margin: 50px auto;
+	text-align: center;
+	background: #EEE;
+	padding: 50px;
+	color: #555;
+	border-radius: 5px;
+}
+
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+input[type="file"]{
+	visibility: hidden;
+	height: 0px;
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+}
+
+.dashLinks {
+}
+
+.dashLinks a {
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+	padding: 0px 16px;
+	height: 45px;
+	line-height: 45px;
+	background: #3AB0FF;
+	font-weight: bold;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.dashLinks a:after {
+	font-family: 'FontAwesome';
+	content: '\f105';
+	position: absolute;
+	right: 46px;
+	opacity: 0;
+	transition: all 0.2s ease-in;
+}
+
+.dashLinks a:hover:after {
+	opacity: 1;
+	right: 16px;
+}
+
+.dashLinks a:last-of-type {
+	margin: 0px; 
+}
+
+.dashLinks a:last-of-type:after {
+	content: '\f101';
+}
+
+section table {
+	width: 100%;
+}
+
+section table thead {
+	background: #3AB0FF;
+	color: #FFF;
+}
+
+section table tr {
+	line-height: 30px;
+}
+
+section table td, section table th {
+  	padding: 5px;
+	text-align: left;
+	vertical-align: text-top;
+}
+
+section table a {
+	width: 35px;
+	display: inline-block;
+	border: none;
+	background: #3AB0FF;
+	color: #FFF;
+	text-decoration: none;
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+}
+
+section table p {
+	background: #CCC;
+	color: #EEE;
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	margin: 0px;
+}
+
+section table tr:nth-child(even) {
+	background: #EEE;
+}
+
+.reviews article {
+	margin-bottom: 10px;
+}
+
+.reviews article:last-of-type {
+	margin-bottom: 20px;
+}
+
+.reviews article h5 {
+	font-size: 1em;
+}
+
+.returnBtn {
+	display: block;
+	padding: 8px 16px;
+	margin-top: 10px;
+	border: none;
+	background: #3AB0FF;
+	color: #FFF;
+	text-decoration: none;
+	text-align: center;
+	float: left;
+}
+
+.tutorTable th, .tutorTable td {
+	width: 50%;
+	text-align: center;
+}
+
+.tutorTable td:first-of-type {
+	border-right: 1px solid #EEE;
+}
